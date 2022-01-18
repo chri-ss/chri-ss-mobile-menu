@@ -1,0 +1,66 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    background-image: url('./images/pexels-photo-708777.jpeg');
+    box-sizing: border-box;
+}
+
+.nav {
+    display: flex;
+    background-color: slategrey;
+    color: white;
+    height: 100vh;
+    width: 30%;
+    flex-direction: column;
+    align-items: space-evenly;
+    opacity: 0.6;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+}
+
+.inner-link {
+    height: 50%;
+    width: 80%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: none;
+    transition: background-color .5s ease-in;
+}
+
+.inner-link:hover {
+    border: 1px solid rgb(48, 21, 65)
+}
+
+.selected {
+    background-color: rgb(8, 121, 233);
+    opacity: 1;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    opacity: 1;
+    transform: scale(3);
+}
+
+.title {
+    font-size: 32px;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
