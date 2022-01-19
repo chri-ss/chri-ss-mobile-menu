@@ -8,11 +8,18 @@ import menu from './images/menu_black_24dp.svg';
 const makeMenu = () => {
   const body = document.querySelector('body');
   const title = document.createElement('div');
-  const menuIcon = new Image();
-  menuIcon.src = menu;
   const titleText = document.createElement('div');
   titleText.textContent = 'A nice menu';
-  title.appendChild(menuIcon);
+  titleText.classList.add('title-text', 'hidden');
+  const menuIcon = new Image();
+  menuIcon.src = menu;
+
+  const menuLink = document.createElement('a');
+  menuLink.appendChild(menuIcon);
+  menuLink.href = '#';
+  menuIcon.classList.add('menu-link');
+
+  title.appendChild(menuLink);
   title.appendChild(titleText);
   title.classList.add('title');
   const nav = document.createElement('ul');
@@ -39,8 +46,26 @@ const makeMenu = () => {
 
   nav.addEventListener('click', (e) => {
     if (e.target.className === 'inner-link') {
-      
       e.target.classList.toggle('selected');
+    }
+  });
+
+  nav.addEventListener('click', (e) => {
+    if (e.target.classList[0] === 'menu-link') {
+      const tabs = Array.from(document.querySelectorAll('.tab'));
+      const tabImages = Array.from(document.querySelectorAll('.tab > *'));
+      tabs.forEach(tab => {
+        tab.classList.toggle('wide');
+      });
+
+      tabImages.forEach((image) => {
+        image.classList.toggle('wide');
+      });
+
+      console.log(tabImages);
+
+      nav.classList.toggle('thick');
+      titleText.classList.toggle('hidden');
     }
   });
 
