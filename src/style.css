@@ -4,17 +4,19 @@ body {
   justify-content: flex-end;
   background-image: url("./images/pexels-photo-708777.jpeg");
   box-sizing: border-box;
+  transition: width 1s ease-in-out;
 }
 
 .nav {
   display: flex;
-  background-color: slategrey;
+  background-color: rgb(162, 190, 219);
   color: white;
   height: 100vh;
-  width: 10%;
+  width: 15%;
   flex-direction: column;
-  align-items: space-evenly;
+  align-items: center;
   opacity: 0.6;
+  transition: width 1s ease-in-out;
 }
 
 .tab {
@@ -22,7 +24,6 @@ body {
   justify-content: center;
   align-items: center;
   flex: 1;
-  width: 0;
 }
 
 .inner-link {
@@ -35,7 +36,7 @@ body {
   width: 100%;
   height: 100%;
   border: none;
-  transition: background-color 0.5s ease-in;
+  transition: width 1s ease-in;
 }
 
 .inner-link:hover {
@@ -47,16 +48,8 @@ body {
   opacity: 1;
 }
 
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
-}
-
 img {
-  opacity: 0;
+  width: 0;
   transform: scale(2);
 }
 
@@ -73,6 +66,8 @@ img {
   transform: scale(1.1);
   width: 100%;
   opacity: 1;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .wrapper {
@@ -86,7 +81,7 @@ img {
 }
 
 .thick {
-  width: 15%;
+  width: 30%;
 }
 
 .wide {
